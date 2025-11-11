@@ -1,6 +1,5 @@
 import * as React from "react";
-import { Check, Clock, AlertCircle, Loader2 } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { Check, Clock, AlertCircle, Loader2, LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { AgentStatus } from "@/lib/constants";
 
