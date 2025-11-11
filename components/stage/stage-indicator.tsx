@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Check, Clock, AlertCircle, Loader2 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { AgentStatus } from "@/lib/constants";
 
@@ -11,7 +12,14 @@ interface StageIndicatorProps {
   className?: string;
 }
 
-const STATUS_CONFIG = {
+interface StatusConfig {
+  icon: LucideIcon;
+  color: string;
+  bgColor: string;
+  animate?: boolean;
+}
+
+const STATUS_CONFIG: Record<AgentStatus, StatusConfig> = {
   pending: {
     icon: Clock,
     color: "text-neutral-400",
